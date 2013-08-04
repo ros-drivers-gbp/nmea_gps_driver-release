@@ -1,0 +1,34 @@
+ros-hydro-nmea-gps-driver (0.3.2-0precise) precise; urgency=high
+
+  * Moved all new functionaliaty to nmea_navsat_driver and nmea_msgs packages. nmea_gps_driver will be removed in Indigo.
+
+ -- Eric Perko <eric@ericperko.com>  Sun, 21 Jul 2013 04:00:00 -0000
+
+ros-hydro-nmea-gps-driver (0.3.1-0precise) precise; urgency=high
+
+  * Removed incorrect find_package dependencies
+
+ -- Eric Perko <eric@ericperko.com>  Tue, 07 May 2013 04:00:00 -0000
+
+ros-hydro-nmea-gps-driver (0.3.0-0precise) precise; urgency=high
+
+  * Initial release for Hydro
+  * Converted to Catkin
+  * nmea_gps_driver.py is now deprecated and will be removed in I-Turtle. Replacement node is nmea_serial_driver.py .
+  * Refactored code into NMEA parser, common ROS driver and separate nodes for reading directly from serial or from topic.
+  * Bugs fixed:
+    
+      * nmea_gps_driver crashes when a sentence doesn't have a checksum * character ( http://kforge.ros.org/gpsdrivers/trac/ticket/4 )
+      * Add ability for nmea_gps_driver to support reading from string topic ( https://github.com/ros-drivers/nmea_gps_driver/issues/1 ). Use the nmea_topic_driver.py node to get this support.
+    
+
+ -- Eric Perko <eric@ericperko.com>  Sun, 05 May 2013 04:00:00 -0000
+
+ros-hydro-nmea-gps-driver (0.2.0-0precise) precise; urgency=high
+
+  * Initial version (released into Fuerte)
+  * Supports GGA or RMC+GSA sentences to generate sensor_msgs/NavSatFix messages
+
+ -- Eric Perko <eric@ericperko.com>  Thu, 15 Mar 2012 04:00:00 -0000
+
+
